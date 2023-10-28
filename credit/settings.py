@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-nq^pm^bm&#m%fs*c4%hz#(ul6%=re*kj-h9=4tra=*swqqdlt-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 # Application definition
 
@@ -123,7 +123,10 @@ STATIC_URL = 'static/'
 
 STATIC_ROOT = '/creditapp/static/'  # Update this path to your actual static directory for production deployment.
 
-
+import os
+STATIC_URL = 'static/'
+STATICFILES_DIRS= os. path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os. path.join(BASE_DIR, 'staticfiles_build', 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
