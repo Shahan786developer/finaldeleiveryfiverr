@@ -5,7 +5,11 @@ from django.contrib.auth import login
 from django.shortcuts import render, redirect
 from .forms import *
 
-
+def dashbored(request):
+    
+       return render(request, 'creditapp/dd.html') 
+      
+    
 
 def index(request):
     if request.user.is_authenticated:
