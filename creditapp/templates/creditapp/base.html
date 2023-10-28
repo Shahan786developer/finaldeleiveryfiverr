@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css">
+</head>
+<body>
+  {% load static %}
+  <!-- Navbar (common to all pages) -->
+  <nav class="bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-7">
+          <div>
+            <!-- Website Logo -->
+            <a href="{% url 'base' %}" class="flex items-center py-4 px-2">
+              <img src="{% static 'images/logo.jfif' %}" alt="Logo" class="h-20 w-15 mr-2">
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-3">
+          {% if request.user.is_authenticated %}
+            <!-- Show these links when the user is authenticated -->
+            <a href="" class="py-2 px-2 font-medium text-pink-500 rounded hover:bg-pink-500 hover:text-white transition duration-300">Reports</a>
+            <a href="{% url 'logout' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Log Out</a>
+          {% else %}
+            <!-- Show these links when the user is not authenticated -->
+            <a href="{% url 'login' %}" class="py-2 px-2 font-medium text-pink-500 rounded hover:bg-pink-500 hover:text-white transition duration-300">Log In</a>
+            <a href="{% url 'registration' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Sign Up</a>
+          {% endif %}
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button class="outline-none" onclick="toggleNavbar('mobile-menu')">
+            <svg class="w-6 h-6 text-gray-500 hover:text-pink-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="flex flex-col space-y-3 items-center">
+        <a href="{% url 'logout' %}" class="py-2 px-2 font-medium text-pink-500 rounded hover:bg-pink-500 hover:text-white transition duration-300">Log In</a>
+        <a href="{% url 'registration' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <script>
+    function toggleNavbar(collapseID) {
+      const element = document.getElementById(collapseID);
+      element.classList.toggle("hidden");
+      element.classList.toggle("block");
+    }
+  </script>
+</body>
+</html>

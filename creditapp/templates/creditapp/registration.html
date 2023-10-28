@@ -1,0 +1,98 @@
+{% extends "creditapp/base.html" %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center pt-12 p-4">
+    <div class="mx-auto w-full max-w-[550px] shadow-md bg-white">
+        <h2 class="text-2xl text-center text-pink-500 font-semibold mb-4">Registration Form</h2>
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4" method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            
+            </div>
+            <div>
+                {{ form.email.label_tag }}
+                {{ form.email }}
+                <p class="text-red-500">{{ form.email.errors }}</p>
+            </div>
+            <div>
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}
+                <p class="text-red-500">{{ form.first_name.errors }}</p>
+            </div>
+            <div>
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+                <p class="text-red-500">{{ form.last_name.errors }}</p>
+            </div>
+            <div>
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                <p class="text-red-500">{{ form.password1.errors }}</p>
+            </div>
+            <div>
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                <p class="text-red-500">{{ form.password2.errors }}</p>
+            </div>
+            <div>
+                {{ form.address.label_tag }}
+                {{ form.address }}
+                <p class="text-red-500">{{ form.address.errors }}</p>
+            </div>
+            <div>
+                {{ form.city.label_tag }}
+                {{ form.city }}
+                <p class="text-red-500">{{ form.city.errors }}</p>
+            </div>
+            <div>
+                {{ form.state.label_tag }}
+                {{ form.state }}
+                <p class="text-red-500">{{ form.state.errors }}</p>
+            </div>
+            <div>
+                {{ form.zipcode.label_tag }}
+                {{ form.zipcode }}
+                <p class="text-red-500">{{ form.zipcode.errors }}</p>
+            </div>
+            <div>
+                {{ form.day.label_tag }}
+                {{ form.day }}
+                <p class="text-red-500">{{ form.day.errors }}</p>
+            </div>
+            <div>
+                {{ form.month.label_tag }}
+                {{ form.month }}
+                <p class="text-red-500">{{ form.month.errors }}</p>
+            </div>
+            <div>
+                {{ form.year.label_tag }}
+                {{ form.year }}
+                <p class="text-red-500">{{ form.year.errors }}</p>
+            </div>
+            <div>
+                {{ form.social_number.label_tag }}
+                {{ form.social_number }}
+                <p class="text-red-500">{{ form.social_number.errors }}</p>
+            </div>
+            <div  >
+                {{ form.phone_number.label_tag }}
+                {{ form.phone_number }}
+                <p class="text-red-500">{{ form.phone_number.errors }}</p>
+            </div>
+            <div class="col-span-1 sm:col-span-2">
+                <div class="mb-5 text-3 flex justify-center">
+                    <button class="hover:shadow-form rounded-md bg-[#FF69B4] py-3 px-8 text-center text-base font-bold text-white outline-none w-full" type="submit">Register</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
