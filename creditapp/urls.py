@@ -1,4 +1,6 @@
 from django.urls import path
+
+from credit.credit import settings
 from . import views
 from django.contrib.auth import views as auth_views
 
@@ -11,3 +13,5 @@ urlpatterns = [
      
     # Add more URL patterns for other views as needed
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

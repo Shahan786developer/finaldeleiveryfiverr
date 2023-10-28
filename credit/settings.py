@@ -77,8 +77,12 @@ AUTH_USER_MODEL = 'creditapp.CustomUser'  # Replace 'app_name' with the name of 
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '-a*gFAE*a5FGD5C5AbbGEeBF31DfgGCD',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '40956',
     }
 }
 
