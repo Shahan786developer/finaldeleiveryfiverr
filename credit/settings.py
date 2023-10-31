@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -132,13 +133,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-# STATIC_URL = 'static/'
-
-# STATIC_ROOT = '/creditapp/static/'  # Update this path to your actual static directory for production deployment.
-
+# Set the URL for serving static files (this is the URL path used in templates).
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# Define the directory where static files will be collected by the `collectstatic` command.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Add the path to your static files directory to STATICFILES_DIRS.
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
