@@ -3564,8 +3564,9 @@ select.input__elem.is-recommended {
     width: 29px;
     height: 27px;
     background-color: var(--color-text-title);
-    -webkit-mask-image: url("../img/scoreres.7552dec7c85d.svg");
-    mask-image: url("../img/scoreres.7552dec7c85d.svg");
+    -webkit-mask-image: url("{% static 'img/scoreres.7552dec7c85d.svg' %}");
+    mask-image: url("{% static 'img/scoreres.7552dec7c85d.svg' %}");
+    
 }
 
 @media only screen and (max-width: 44.999em) {
