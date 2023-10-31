@@ -1,7 +1,7 @@
 
-{%load static %}
 
 
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,15 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <link type="text/css" rel="stylesheet" href="https://secureclientstorage.s3.amazonaws.com/var_sixLwAX.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ced23fb189344e4050c333bdf5728e99f30196afc4cd159121096f83fe4bb196">
+    <link type="text/css" rel="stylesheet" href="https://secureclientstorage.s3.amazonaws.com/var_sixLwAX.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=21ab71ff176aa642d0784eac6015d458538d063c12c9c75d684cb168c81d479c">
+    <link type="text/css" rel="stylesheet" href="/staticfiles/wl_common/css/common.5c669c967600.css">
     <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
-
-    <link type="text/css" rel="stylesheet" href="https://secureclientstorage.s3.amazonaws.com/extra_mIhoAyf.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=03a7fc9cde13f50a92cdde8c2dcbd9a35478ebd3fcf5ab3c44d88413249ae865">
+    <link type="text/css" rel="stylesheet" href="https://secureclientstorage.s3.amazonaws.com/extra_mIhoAyf.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=87a87096b94e1b0908bd2401b6437647dc71ad4cfcf5aed53c3b593079130926">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="https://secureclientstorage.s3.amazonaws.com/favicon_ClUZWMp.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bf105b1dcb7b0092469fce816f4179da6164e933e08395083a4f7a6f971b4215">
+    <link rel="shortcut icon" href="https://secureclientstorage.s3.amazonaws.com/favicon_ClUZWMp.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=89f1990d993c02dcebf5ee7bd52d4c2ec143648903f39136be99cfdd255acfbd">
     <script type='text/javascript'>
   window.smartlook||(function(d) {
     var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
@@ -117,12 +117,14 @@
                                 <ul class="nav__list">
                                     
                                     <li class="nav__item  is-login">
-                                        <a href="{% url 'login' %}" class="header__login">Log In</a>
-
+                                        <a class="nav__link" href="/accounts/login/">
+                                            <span class="nav__link-name">Log In</span>
+                                        </a>
                                     </li>
                                     <li class="nav__item  is-signout">
-                                        <a href="{% url 'registration' %}" class="header__sign">Sign Up</a>
-
+                                        <a class="nav__link" href="/accounts/signup/">
+                                            <span class="nav__link-name">Sign Up</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -132,9 +134,8 @@
                     <div class="col-xs-4  col-sm-4  right-xs">
                         <div class="header__actions">
 
-                            <a href="{% url 'login' %}" class="header__login">Log In</a>
-                            <a href="{% url 'registration' %}" class="header__sign">Sign Up</a>
-                            
+                            <a href="/accounts/login/" class="header__login">Log In</a>
+                            <a href="/accounts/signup/" class="header__sign">Sign Up</a>
                             <label class="header__toggle" for="root-menu">
                                 <span class="header__toggle-icon">Menu</span>
                             </label>
@@ -151,11 +152,11 @@
             <div class="home__hero is-business_2">
 
                 <div class="home__hero-bg">
-<!--                    <img src="https://secureclientstorage.s3.amazonaws.com/business_2_tivrHvg.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c6704c9541c507cfe5d31516d21d69f281deaebe2ee006ad4a39719f64bf710b" class="home__hero-img">-->
+<!--                    <img src="https://secureclientstorage.s3.amazonaws.com/business_2_tivrHvg.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d1bcaafb39203da9ab226f80ed10aab91f6dd09bfb0e1eb07485350b338ffd3b" class="home__hero-img">-->
                     <picture>
-                        <source srcset="https://secureclientstorage.s3.amazonaws.com/business_2_tivrHvg.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c6704c9541c507cfe5d31516d21d69f281deaebe2ee006ad4a39719f64bf710b" media="(min-width: 720px)">
-                        <source srcset="https://secureclientstorage.s3.amazonaws.com/business_2_TLnt9jJ.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e0f12ddd3e074185b92b391016f96f2611dc521baf58b381e8676ce992b35326">
-                        <img id="hero_img" class="img-svginject home__hero-img" src="https://secureclientstorage.s3.amazonaws.com/business_2_tivrHvg.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=c6704c9541c507cfe5d31516d21d69f281deaebe2ee006ad4a39719f64bf710b" crossorigin="anonymous">
+                        <source srcset="https://secureclientstorage.s3.amazonaws.com/business_2_tivrHvg.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d1bcaafb39203da9ab226f80ed10aab91f6dd09bfb0e1eb07485350b338ffd3b" media="(min-width: 720px)">
+                        <source srcset="https://secureclientstorage.s3.amazonaws.com/business_2_TLnt9jJ.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4f93cf1a12d1c2b7827c62a904983cad7ada7552a5eb062e83fa326731185321">
+                        <img id="hero_img" class="img-svginject home__hero-img" src="https://secureclientstorage.s3.amazonaws.com/business_2_tivrHvg.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=d1bcaafb39203da9ab226f80ed10aab91f6dd09bfb0e1eb07485350b338ffd3b" crossorigin="anonymous">
                     </picture>
                 </div>
 
@@ -195,7 +196,7 @@
                     </div>
                     <div class="col-xs-12  col-md-6">
                         <div class="home__steps-graph">
-                            <img id="hiw_step_1" src="https://secureclientstorage.s3.amazonaws.com/step_01_lJDkhao.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=1fd7fa6be5baa58793f52cb4e329eda4c5fb08e4b715d5f1adb33f1ea1e7efa3" class="img-svginject home__steps-thumb" title="Sign Up" crossorigin="anonymous">
+                            <img id="hiw_step_1" src="https://secureclientstorage.s3.amazonaws.com/step_01_lJDkhao.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ff489692c8f2eac8e26898324a52bbaa8ebf4ad173fa19070f21e020bcd15a73" class="img-svginject home__steps-thumb" title="Sign Up" crossorigin="anonymous">
                         </div>
                     </div>
                 </div>
@@ -212,7 +213,7 @@
                     </div>
                     <div class="col-xs-12  col-md-6">
                         <div class="home__steps-graph">
-                            <img id="hiw_step_2" src="https://secureclientstorage.s3.amazonaws.com/step_02_JihUgn6.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=20b9f430d58bbf34600ca17f6272c59459fd827ea1f5697a51a609e694c24b03" class="img-svginject home__steps-thumb" title="Dispute Accounts" crossorigin="anonymous">
+                            <img id="hiw_step_2" src="https://secureclientstorage.s3.amazonaws.com/step_02_JihUgn6.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=9e975a6e91fc4da1b49df52ff182ad72065ecff9a7f99d3be709939d6014d538" class="img-svginject home__steps-thumb" title="Dispute Accounts" crossorigin="anonymous">
                         </div>
                     </div>
                 </div>
@@ -229,7 +230,7 @@
                     </div>
                     <div class="col-xs-12  col-md-6">
                         <div class="home__steps-graph">
-                            <img id="hiw_step_3" src="https://secureclientstorage.s3.amazonaws.com/step_03_zPPEJ6B.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b0d72b1107f38a4312a4785c44bf7dcc1ed4c20b02ccad8d30d02796cc07a1fa" class="img-svginject home__steps-thumb" title="Letters Sent" crossorigin="anonymous">
+                            <img id="hiw_step_3" src="https://secureclientstorage.s3.amazonaws.com/step_03_zPPEJ6B.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=49be8bc3fd19e5c5c3dc110fb94667d6334de7282cf6bd408faed893db8b536b" class="img-svginject home__steps-thumb" title="Letters Sent" crossorigin="anonymous">
                         </div>
                     </div>
                 </div>
@@ -251,8 +252,8 @@
                         <div class="col-xs-6  col-md-3">
                             <div class="home__more-figure">
                                 <span class="home__more-graph">
-                                
-                                <img id="dispute_lp"  src="{% static 'images/cl.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
+
+                                    <img id="dispute_coll" src="{% static 'images/cl.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
                                 
                                 </span>
                                 <span class="home__more-figname">Late Payments</span>
@@ -262,8 +263,9 @@
                         <div class="col-xs-6  col-md-3">
                             <div class="home__more-figure">
                                 <span class="home__more-graph">
+       <img id="dispute_coll" src="{% static 'images/col.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
                                     
-                                    <img id="dispute_coll"  src="{% static 'images/col.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
+                                    <!-- <img id="dispute_coll" src="https://secureclientstorage.s3.amazonaws.com/collection_CqPfovN.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b8372d7df4b83f1754e969c1ce1e9057b30119e6e81c90b928021836c78dee9b" class="img-svginject" style="height: 100%" crossorigin="anonymous"> -->
                                     
                                 </span>
                                 <span class="home__more-figname">Collection</span>
@@ -273,8 +275,9 @@
                         <div class="col-xs-6  col-md-3">
                             <div class="home__more-figure">
                                 <span class="home__more-graph">
-                                    
-                                    <img id="dispute_charge" src="{% static 'images/rep.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
+                                    <img id="dispute_coll" src="{% static 'images/rep.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
+    
+                                    <!-- <img id="dispute_charge" src="https://secureclientstorage.s3.amazonaws.com/charge_off_cUFiRRj.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=18588c9e9bcb9887347f5ce51901b5b3ee37f7649b0513db5c6916d84e817eef" class="img-svginject" style="height: 100%" crossorigin="anonymous"> -->
                                     
                                 </span>
                                 <span class="home__more-figname">Charge Offs</span>
@@ -282,13 +285,11 @@
                         </div>
 
                         <div class="col-xs-6  col-md-3">
-                            <div class="home__more-figure img-svginjec">
-                                <span   class="home__more-graph">
+                            <div class="home__more-figure">
+                                <span class="home__more-graph">
+       <img id="dispute_coll" src="{% static 'images/med.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
                                     
-                                    
-                                            
-                                    <img id="dispute_med" src="{% static 'images/Capture.png' %}" class="img-svginject" style="height: 100%" crossorigin="anonymous">
-
+                                    <!-- <img id="dispute_med" src="https://secureclientstorage.s3.amazonaws.com/medical_debt_fLxbVAI.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f287c941cc1ba1306fd734f38327b36d6c56bd39262db9d05b4b9ace318b1385" class="img-svginject" style="height: 100%" crossorigin="anonymous"> -->
                                     
                                 </span>
                                 <span class="home__more-figname">Medical Debt</span>
@@ -316,7 +317,7 @@
                         </div>
 
                         <div class="col-xs-12  col-md-7">
-                            <img id="price_img" src="https://secureclientstorage.s3.amazonaws.com/minimalist_1_gy3JlZd.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=3b9f2c2553aad752f59de607b62384de27aa184c85fe23356ae66d9184c02ca6" class="img-svginject home__pricing-thumb" title="Our Pricing" crossorigin="anonymous">
+                            <img id="price_img" src="https://secureclientstorage.s3.amazonaws.com/minimalist_1_gy3JlZd.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=91620f0f46b634875798a5cd02b53d638d79539d39a65bd0d00916bb450b7f38" class="img-svginject home__pricing-thumb" title="Our Pricing" crossorigin="anonymous">
                         </div>
 
                     </div>
@@ -378,7 +379,7 @@
             <div class="home__more  home__more--alt home__signup">
                 
                 <div class="home__more-backgr  is-left">
-                    <img id="footer_img" class="img-svginject home__more-bgimg" src="https://secureclientstorage.s3.amazonaws.com/geometric_1_BayQfNs.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f1718c3900fa958f6e9b8bee411c940c75f4dc86950fa025ffbddaa51d2f88f2" crossorigin="anonymous">
+                    <img id="footer_img" class="img-svginject home__more-bgimg" src="https://secureclientstorage.s3.amazonaws.com/geometric_1_BayQfNs.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T175943Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b3358729c6b6230d63b7ecb0cdfd7819017e993f689ab499de70d3ca49afa611" crossorigin="anonymous">
                 </div>
                 
                 <div class="home__more-container">
