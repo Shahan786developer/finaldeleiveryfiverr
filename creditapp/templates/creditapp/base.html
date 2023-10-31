@@ -1,70 +1,147 @@
+
+{%load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css">
-</head>
+    <meta charset="utf-8">
+    
+    <title>Rose Credit Repair</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link type="text/css" rel="stylesheet" href="https://secureclientstorage.s3.amazonaws.com/var_sixLwAX.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ced23fb189344e4050c333bdf5728e99f30196afc4cd159121096f83fe4bb196">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://secureclientstorage.s3.amazonaws.com/extra_mIhoAyf.css?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=03a7fc9cde13f50a92cdde8c2dcbd9a35478ebd3fcf5ab3c44d88413249ae865">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://secureclientstorage.s3.amazonaws.com/favicon_ClUZWMp.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAJMN2KCFC4N5LU6JQ%2F20231031%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20231031T102644Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=bf105b1dcb7b0092469fce816f4179da6164e933e08395083a4f7a6f971b4215">
+    <script type='text/javascript'>
+  window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '1fdf9d1417efd128e81545d553464373ee7ac15b', { region: 'eu' });
+</script>
 <body>
   {% load static %}
-  <!-- Navbar (common to all pages) -->
-  <nav class="bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between">
-        <div class="flex space-x-7">
-          <div>
-            <!-- Website Logo -->
-            <a href="{% url 'base' %}" class="flex items-center py-4 px-2">
-              <img src="{% static 'images/logo.jfif' %}" alt="Logo" class="h-20 w-15 mr-2">
-            </a>
-          </div>
+  
+  <input type="checkbox" class="root-menu-toggler" id="root-menu" />
+  <div class="rootcontainer">
+      <a name="top"></a><!-- Navbar (common to all pages) -->
+  <header class="m-header">
+    <div class="header__container">
+
+        <div class="row  middle-xs">
+            <div class="col-xs-4  col-sm-4">
+                <div class="m-logo">
+                    <h1 class="logo__title">Rose Credit Repair</h1>
+                    
+                        <h1 class="logo__title_text">Rose Credit Repair</h1>
+                    
+                    <a href="/" class="logo__link"></a>
+                </div>
+            </div>
+            <div class="col-xs-4  col-sm-4  center-xs">
+                
+                <label class="nav__toggle" for="root-menu"></label>
+                <nav class="m-nav">
+                    <div class="o-container">
+                        <ul class="nav__list">
+                            
+                            <li class="nav__item  is-login">
+                              <a href="{% url 'login' %}" class="header__login">Log In</a>
+
+                            </li>
+                            <li class="nav__item  is-signout">
+                              <a href="{% url 'registration' %}" class="header__sign">Sign Up</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+            <div class="col-xs-4  col-sm-4  right-xs">
+                <div class="header__actions">
+
+                  <a href="{% url 'login' %}" class="header__login">Log In</a>
+<a href="{% url 'registration' %}" class="header__sign">Sign Up</a>
+
+                    <label class="header__toggle" for="root-menu">
+                        <span class="header__toggle-icon">Menu</span>
+                    </label>
+
+                </div>
+            </div>
         </div>
-        <div class="hidden md:flex items-center space-x-3">
-          {% if request.user.is_authenticated %}
-            <!-- Show these links when the user is authenticated -->
-            <a href="" class="py-2 px-2 font-medium text-pink-500 rounded hover:bg-pink-500 hover:text-white transition duration-300">Reports</a>
-            <a href="{% url 'logout' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Log Out</a>
-        <a href="{% url 'dashbored' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Dashbored(Exmple)</a>
-           
-            {% else %}
-            <!-- Show these links when the user is not authenticated -->
-            <a href="{% url 'login' %}" class="py-2 px-2 font-medium text-pink-500 rounded hover:bg-pink-500 hover:text-white transition duration-300">Log In</a>
-            <a href="{% url 'registration' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Sign Up</a>
-        <a href="{% url 'dashbored' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Dashbored</a>
-           
-            {% endif %}
-        </div>
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-          <button class="outline-none" onclick="toggleNavbar('mobile-menu')">
-            <svg class="w-6 h-6 text-gray-500 hover:text-pink-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
+
     </div>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden">
-      <div class="flex flex-col space-y-3 items-center">
-        <a href="{% url 'logout' %}" class="py-2 px-2 font-medium text-pink-500 rounded hover:bg-pink-500 hover:text-white transition duration-300">Log In</a>
-        <a href="{% url 'registration' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Sign Up</a>
-        <a href="{% url 'dashbored' %}" class="py-2 px-2 font-medium text-white bg-pink-500 rounded hover:bg-pink-400 transition duration-300">Dashbored</a>
-      </div>
-    </div>
-  </nav>
+</header>
   <div class="content">
     {% block content %}
     {% endblock %}
   </div>
-  <script>
-    function toggleNavbar(collapseID) {
-      const element = document.getElementById(collapseID);
-      element.classList.toggle("hidden");
-      element.classList.toggle("block");
-    }
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/staticfiles/wl_common/js/scripts.85aeb16a03ea.js"></script>
+  <script type="text/javascript" src="/staticfiles/wl_common/js/slick.min.d5a61c749e44.js"></script>
+  <script type="text/javascript" src="/staticfiles/js/svg-inject.min.ae60670a20f0.js"></script>
+  <script type="text/javascript">
+      $(function() {
+          $('.js-slick').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              mobileFirst: true,
+              arrows: true,
+              dots: true
+          });
+      });
   </script>
+  
+      <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', function() {
+              SVGInject(document.querySelectorAll("img.img-svginject"));
+          });
+      </script>
+  
+      
+
+<script type='text/javascript' src='https://widget.freshworks.com/widgets/66000003022.js' async defer></script>
+<script>
+  var $ = jQuery.noConflict();
+window.fwSettings={
+'widget_id':66000003022
+};
+!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()
+
+FreshworksWidget('prefill', 'ticketForm', {
+name: $('#first_name').text(),
+email: $('#email').text(),
+group_id: 66000364180,
+custom_fields: {
+              cf_partner: $('#cf_partner').text(),
+              cf_path: $('#cf_path').text(),
+              },
+})
+
+FreshworksWidget('hide', 'ticketForm', [
+  'group_id',
+  'custom_fields.cf_countdown_days',
+  'custom_fields.cf_is_restoration',
+  'custom_fields.cf_is_partner',
+  'custom_fields.cf_repair_round',
+  'custom_fields.cf_accounts_deleted',
+  'custom_fields.cf_accounts_disputing',
+  'custom_fields.cf_partner',
+  'custom_fields.cf_path',
+  ]);
+</script>
+
 </body>
 </html>
