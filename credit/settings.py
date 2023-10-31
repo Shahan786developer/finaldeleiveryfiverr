@@ -137,8 +137,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Define the directory where static files will be collected by the `collectstatic` command.
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,  'static'),
+)
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
