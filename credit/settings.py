@@ -31,7 +31,8 @@ ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'admin_argon.apps.AdminArgonConfig',
+        'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -57,8 +58,9 @@ ROOT_URLCONF = 'credit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -78,23 +80,23 @@ AUTH_USER_MODEL = 'creditapp.CustomUser'  # Replace 'app_name' with the name of 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '-a*gFAE*a5FGD5C5AbbGEeBF31DfgGCD',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '40956',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': '-a*gFAE*a5FGD5C5AbbGEeBF31DfgGCD',
+#         'HOST': 'viaduct.proxy.rlwy.net',
+#         'PORT': '40956',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
