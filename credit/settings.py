@@ -80,23 +80,23 @@ AUTH_USER_MODEL = 'creditapp.CustomUser'  # Replace 'app_name' with the name of 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': '-a*gFAE*a5FGD5C5AbbGEeBF31DfgGCD',
-#         'HOST': 'viaduct.proxy.rlwy.net',
-#         'PORT': '40956',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '-a*gFAE*a5FGD5C5AbbGEeBF31DfgGCD',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '40956',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
