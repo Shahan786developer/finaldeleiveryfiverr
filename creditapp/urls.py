@@ -13,3 +13,4 @@ urlpatterns = [
      
     # Add more URL patterns for other views as needed
  ]
+
